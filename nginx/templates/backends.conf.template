@@ -1,0 +1,5 @@
+# upstream backend {
+#
+#     server ${BACKEND_SERVER}:${BACKEND_PORT};
+#
+# }

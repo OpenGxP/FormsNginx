@@ -3,3 +3,9 @@
 
 # private backup
 .tresorit
+
+# logs
+*.log
+
+# dumps
+dumps/*

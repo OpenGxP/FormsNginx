@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  nginx:
+    restart: always
+    build: .
+    volumes:
+      - ./logs:/var/log/nginx
+      - ./dumps:/var/dump/nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      - NGINX_HOST=localhost
+      - BACKEND_SERVER=backend
+      - BACKEND_PORT=8000
+      - RESORVER_IP=1.1.1.1
+    secrets:
+      - site.key
+      - site.crt
+      - chain.pem
+      - dhparam.pem
+
+secrets:
+  site.key:
+    file: ./secrets/site.key
+  site.crt:
+    file: ./secrets/site.crt
+  chain.pem:
+    file: ./secrets/chain.pem
+  dhparam.pem:
+    file: ./secrets/dhparam.pem
