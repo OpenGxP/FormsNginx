@@ -14,7 +14,7 @@ services:
       - NGINX_HOST=localhost
       - BACKEND_SERVER=backend
       - BACKEND_PORT=8000
-      - RESORVER_IP=1.1.1.1
+      - RESORVER_IPS=1.1.1.1 8.8.8.8
     secrets:
       - site.key
       - site.crt
