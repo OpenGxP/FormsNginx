@@ -12,9 +12,11 @@ services:
       - "443:443"
     environment:
       - NGINX_HOST=localhost
+      - NGINX_HOST_MAIN=localhost
       - BACKEND_SERVER=backend
       - BACKEND_PORT=8000
       - RESORVER_IPS=1.1.1.1 8.8.8.8
+      - VUE_APP_BACKEND=http://localhost:8000
     secrets:
       - site.key
       - site.crt

@@ -9,3 +9,8 @@
 
 # dumps
 dumps/*
+
+# secrets
+secrets/*.pem
+secrets/*.crt
+secrets/*.key
